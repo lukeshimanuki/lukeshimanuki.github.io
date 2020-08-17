@@ -1,2 +1,255 @@
-<meta http-equiv="refresh" content="0; url=./resume" />
+---
+---
+<html>
+<head>
+
+<title>Luke Shimanuki</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!-- taken from https://stackoverflow.com/questions/26192897/should-i-use-bootstrap-from-cdn-or-make-a-copy-on-my-server) -->
+<script>
+	var test = document.createElement("div")
+	test.className = "hidden d-none"
+
+	document.head.appendChild(test)
+	var cssLoaded = window.getComputedStyle(test).display === "none"
+	document.head.removeChild(test)
+
+	if (!cssLoaded) {
+		var link = document.createElement("link");
+
+		link.type = "text/css";
+		link.rel = "stylesheet";
+		link.href = "css/bootstrap.min.css";
+
+		document.head.appendChild(link);
+	}
+</script>
+<link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+<body class="loaded">
+<div class="container">
+
+<div class="jumbotron text-center">
+	<h1>Luke Shimanuki</h1>
+	<p>Robotics Engineer <br> Specialist in dealing with perceptual & predictive uncertainty in autonomous vehicles</p>
+</div>
+
+<div class="row">
+	<img src="img/cover.jpg" alt="" class="img-fluid">
+</div>
+
+<br>
+
+<section class="tm-section-3 tm-section-mb"><div class="row">
+	<div class="col-md-4 tm-mb-sm-4 tm-2col-l"><div class="tm-box-3 text-center">
+		<h4><img src="icon/file.svg" alt="" class="tm-media-icon"> Resume</h4>
+		<a href="/resume/resume.pdf" class="btn">PDF</a>
+		<a href="/resume/resume.html" class="btn">HTML</a>
+		<a href="/resume/resume.txt" class="btn">TXT</a>
+	</div></div>
+	<div class="col-md-4 tm-mb-sm-4 tm-2col-l"><div class="tm-box-3 text-center">
+		<h4><img src="icon/tools.svg" alt="" class="tm-media-icon"> Projects</h4>
+		<a href="#research" class="btn">Research</a>
+		&nbsp
+		<a href="#code" class="btn">Code</a>
+	</div></div>
+	<div class="col-md-4 tm-mb-sm-4 tm-2col-l"><div class="tm-box-3 text-center">
+		<h4><img src="icon/envelope.svg" alt="" class="tm-media-icon"> Contact</h4>
+		<a href="mailto:luke@shimanuki.cc" class="btn">Email</a>
+		&nbsp
+		<a href="http://github.com/lukeshimanuki" class="btn">GitHub</a>
+	</div></div>
+</div></section>
+
+<hr>
+
+<div class="row">
+	<div class="col-sm-5">
+		<img src="img/profile.png" alt="" class="img-thumbnail">
+	</div>
+	<div class="col-sm-7">
+		<h2>About Me</h2>
+		<h3><img src="icon/graduation-cap.svg" alt="" class="tm-media-icon"> Education</h3>
+		<p>Massachusetts Institute of Technology (MIT) '2020 <br>
+		M.Eng in Electrical Engineering and Computer Science (AI Concentration) <br>
+		S.B. Double Major in Computer Science and Brain & Cognitive Science (Math minor)</p>
+		<h3><img src="icon/building.svg" alt="" class="tm-media-icon"> Employers</h3>
+		<p>Optimus Ride (current) &nbsp○&nbsp Cruise Automation &nbsp○&nbsp RightHand Robotics &nbsp○&nbsp Tanius Tech</p>
+		<table>
+			<tr>
+				<td><h4><img src="icon/church.svg" alt="" class="tm-media-icon">&nbsp Central Square Church</h4></td>
+				<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+				<td><h4><img src="icon/music.svg" alt="" class="tm-media-icon">&nbsp Piano & Viola</h4></td>
+			</tr>
+			<tr>
+				<td><h4><img src="icon/bread-slice.svg" alt="" class="tm-media-icon">&nbsp Baking Enthusiast</h4></td>
+				<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+				<td><h4><img src="img/smash.jpg" alt="" class="tm-media-icon">&nbsp Pikachu Main</h4></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<hr>
+
+<h1 id="research">Projects</h1>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/ind.png" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Safe Navigation among Unpredictable Human Agents</h3>
+		<p>An alternative approach for planning under uncertainty in future actions of other agents.
+		Instead of guessing their trajectories to avoid, directly reason about "claimed" regions of space-time.
+		Demonstrate that recorded trajectories rarely violate such claims, leading to a policy over 10x safer than previous results.
+		<a href="papers/policy-prediction.pdf" class="btn float-right">Preprint</a>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/upl.svg" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Motion Planning under Obstacle Uncertainty</h3>
+		<p>Prove NP-hardness for fixed dimension.
+		<a href="papers/shimanuki-wafr18.pdf" class="btn float-right">WAFR 2018</a>
+		</p>
+		<p>Demonstrate fixed-parameter algorithm that finds exact solutions when parameter is fixed, or an approximation when it is not.
+		<a href="papers/shimanuki-thesis.pdf" class="btn float-right">Masters Thesis</a>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/pr2.jpg" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Learning to Guide Task and Motion Planning</h3>
+		<p>Task and motion planning algorithm guided by a learned value function over discrete parameters estimated by a graph neural network architecture. Journal paper in preparation.
+		<a href="papers/kim-corl19.pdf" class="btn float-right">CoRL 2019</a>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/vehicle_routing.png" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Vehicle Routing Optimization</h3>
+		<p>Algorithm for efficiently assigning vehicles to passengers to minimize waiting and travel time.
+		<br> Intel STS 2016 Semifinalist.
+		<a href="papers/shimanuki-sts.pdf" class="btn float-right">Intel STS 2016</a>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4" id="code">
+		<img src="img/marlin.jpg" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Barracuda & Marlin: Autonomous Submarines</h3>
+		<p>Two autonomous submarines capable of manipulating objects, aiming and shooting torpedoes, and navigating around obstacles.
+		International finalist (7th place) at RoboSub 2015.
+		<table>
+			<tr>
+				<td>Barracuda:</td>
+				<td colspan=3 align="center"><a href="https://github.com/avbotz/eva-public" class="btn btn-big">Code</a></td>
+				<td><a href="papers/journal-paper-avbotz-2015.pdf" class="btn">Paper</a></td>
+			</tr><tr>
+				<td>Marlin:</td>
+				<td><a href="https://github.com/avbotz/marlin-public" class="btn">MC Code</a></td>
+				<td><a href="https://github.com/avbotz/control" class="btn">uC Code</a></td>
+				<td><a href="https://github.com/avbotz/hydrophones" class="btn">DSP Code</a></td>
+				<td><a href="papers/journal-paper-avbotz-2016.pdf" class="btn">Paper</a></td>
+			</tr>
+		</table>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/grid.png" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>i3-grid</h3>
+		<p>Extension for the i3 Window Manager that allows for navigating among workspaces arranged in a grid instead of numerically.
+		<a href="http://github.com/lukeshimanuki/i3-grid" class="btn float-right">GitHub</a>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/microphone.svg" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Jam</h3>
+		<p>Low latency audio streaming to enable musicians to play together in-sync remotely.
+		Cuts through the overhead with direct P2P connections via UDP hole punching.
+		<a href="http://github.com/lukeshimanuki/jam" class="btn float-right">GitHub</a>
+		</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/clutter.jpeg" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Small Miscellaneous Projects</h3>
+		<table class="text-center">
+			<tr>
+				<td rowspan="2"><a href="http://github.com/lukeshimanuki/cc" class="btn">C Compiler</a></td>
+				<td rowspan="2"><a href="http://github.com/lukeshimanuki/xiangqi_chinese-chess" class="btn">Chinese Chess w/ AI</a></td>
+				<td rowspan="3"><a href="http://github.com/lukeshimanuki/dispute" class="btn">Platform Game w/ <br> Neural Network AI</a></td>
+			</tr><tr>
+			</tr><tr>
+				<td rowspan="2"><a href="http://github.com/lukeshimanuki/ccbrowser" class="btn">Web Browser</a></td>
+				<td rowspan="2"><a href="http://github.com/lukeshimanuki/tics" class="btn">Musical Autocomplete</a></td>
+			</tr><tr>
+				<td rowspan="3"><a href="http://github.com/lukeshimanuki/colors" class="btn">Chrome Extension to <br> change website colors</a></td>
+			</tr><tr>
+				<td rowspan="2"><a href="http://github.com/lukeshimanuki/jos" class="btn">Operating System</a></td>
+				<td rowspan="2"><a href="http://github.com/lukeshimanuki/gesture" class="btn">Trackpad Gesture Keyboard</a></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/laptop-code.svg" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>Eagle Project</h3>
+		<p>Led team of volunteers to collect old computers from the community and refurbish them for use by a local youth coding education organization.</p>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-4">
+		<img src="img/it_is_well.png" alt="" class="img-fluid">
+	</div>
+	<div class="col-sm-8 tm-box-5">
+		<h3>It is Well</h3>
+		<p>Piano arrangement of It is Well with my Soul (Horatio Spafford & Philip Bliss), Blessings (Laura Story), Touch of Heaven (Hillsong), and the chorus of It is Well (Bethel).
+		<a href="http://www.youtube.com/watch?v=CBEuMaGLURQ" class="btn float-right">YouTube</a>
+		</p>
+	</div>
+</div>
+
+</container>
+</body>
+<footer class="mt-5">
+<p class="text-center">Copyright © 2020 Luke Shimanuki ○ luke@shimanuki.cc</p>
+</footer>
+</html>
 
